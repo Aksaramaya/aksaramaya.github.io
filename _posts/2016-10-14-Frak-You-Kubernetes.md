@@ -23,6 +23,7 @@ Example :
 192.168.7.13 ak-node2
 192.168.7.14 ak-node3
 ```
+
 install kubernetes to all node :
 
 ```bash
