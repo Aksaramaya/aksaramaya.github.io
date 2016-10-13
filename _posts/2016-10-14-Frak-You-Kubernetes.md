@@ -3,9 +3,7 @@ layout: post
 title: Frak You Kubernetes
 ---
 
-# Frak You Kubernetes
-
-Clone :
+Clone project :
 ```bash
 $ git clone https://github.com/aksaramaya/kubernetes-setup.git
 ```
