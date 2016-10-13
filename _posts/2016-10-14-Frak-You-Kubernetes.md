@@ -4,6 +4,7 @@ title: Frak You Kubernetes
 ---
 
 Clone project :
+
 ```bash
 $ git clone https://github.com/aksaramaya/kubernetes-setup.git
 ```
@@ -13,6 +14,7 @@ $ git clone https://github.com/aksaramaya/kubernetes-setup.git
 Replace host IP with your environment at `build/host` file. Add master and node to /etc/hosts on all machines (not needed if hostnames already in DNS)
 
 Example :
+
 ```bash
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
@@ -30,12 +32,14 @@ $ sudo make bootstrap
 ```
 
 ## Frak the master
+
 ```bash
 $ ssh frak@192.168.7.11
 $ sudo make master
 ```
 
 ## Frak the nodes
+
 ```bash
 $ sudo make slave
 ```
