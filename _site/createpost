@@ -1,0 +1,12 @@
+#!/bin/bash
+DATE=`date +%Y-%m-%d`
+echo -n "Judul Post : "
+read JUDUL
+POST=`echo $JUDUL|sed "s| |-|g"`
+tee ./_posts/$DATE-$POST.md <<- EOF
+---
+layout: post
+title: $JUDUL
+---
+EOF
+echo "$DATE-$POST.md created"

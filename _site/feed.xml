@@ -1,1 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2016-09-26T23:03:05+07:00</updated><id>/</id><title type="html">Aksaramaya Dev</title><subtitle>We &quot;crot&quot; some code for you :-*</subtitle><entry><title type="html">Internet of Things (Intro)</title><link href="/IoT/" rel="alternate" type="text/html" title="Internet of Things (Intro)" /><published>2016-09-26T00:00:00+07:00</published><updated>2016-09-26T00:00:00+07:00</updated><id>/IoT</id><content type="html" xml:base="/IoT/">&lt;script async=&quot;&quot; class=&quot;speakerdeck-embed&quot; data-id=&quot;4a4fa2ee235047c69562194d277ccd0c&quot; data-ratio=&quot;1.77777777777778&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;</content><summary type="html"></summary></entry><entry><title type="html">Build Large Scalability System With Django And Flask Integration</title><link href="/Build-large-scalability-with-flask-django/" rel="alternate" type="text/html" title="Build Large Scalability System With Django And Flask Integration" /><published>2016-09-26T00:00:00+07:00</published><updated>2016-09-26T00:00:00+07:00</updated><id>/Build-large-scalability-with-flask-django</id><content type="html" xml:base="/Build-large-scalability-with-flask-django/">&lt;script async=&quot;&quot; class=&quot;speakerdeck-embed&quot; data-id=&quot;49ff91641abe46e594d5fb4323cb85a0&quot; data-ratio=&quot;1.77777777777778&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;</content><summary type="html"></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2016-10-23T02:41:32+07:00</updated><id>/</id><title type="html">Aksaramaya Dev</title><subtitle>We &quot;crot&quot; some code for fun :-*</subtitle><entry><title type="html">Kubernetes Vagrant</title><link href="/Kubernetes-Vagrant/" rel="alternate" type="text/html" title="Kubernetes Vagrant" /><published>2016-10-23T00:00:00+07:00</published><updated>2016-10-23T00:00:00+07:00</updated><id>/Kubernetes-Vagrant</id><content type="html" xml:base="/Kubernetes-Vagrant/">&lt;h2 id=&quot;architecture-diagram&quot;&gt;Architecture Diagram&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://postimg.org/image/fer2nliyh/&quot;&gt;&lt;img src=&quot;https://s12.postimg.org/rgmghqs71/Kubernetes_1.png&quot; alt=&quot;Kubernetes (1).png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;vagrant-up&quot;&gt;Vagrant Up&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git clone https://github.com/aksaramaya/kubernetes-setup.git
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;kubernetes-setup
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;vagrant up
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;vagrant ssh ak1
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;kubectl get nodes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><summary type="html">Architecture Diagram</summary></entry><entry><title type="html">Frak You Kubernetes</title><link href="/Frak-You-Kubernetes/" rel="alternate" type="text/html" title="Frak You Kubernetes" /><published>2016-10-14T00:00:00+07:00</published><updated>2016-10-14T00:00:00+07:00</updated><id>/Frak-You-Kubernetes</id><content type="html" xml:base="/Frak-You-Kubernetes/">&lt;p&gt;Clone project :&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git clone https://github.com/aksaramaya/kubernetes-setup.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;bootstrap&quot;&gt;Bootstrap&lt;/h2&gt;
+
+&lt;p&gt;Replace host IP with your environment at &lt;code class=&quot;highlighter-rouge&quot;&gt;build/host&lt;/code&gt; file. Add master and node to /etc/hosts on all machines (not needed if hostnames already in DNS)&lt;/p&gt;
+
+&lt;p&gt;Example :&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+192.168.7.11 ak-master &lt;span class=&quot;c&quot;&gt;#your master IP Address&lt;/span&gt;
+192.168.7.12 ak-node1
+192.168.7.13 ak-node2
+192.168.7.14 ak-node3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;install kubernetes to all node :&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo make
+or
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo make bootstrap
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;frak-the-master&quot;&gt;Frak the master&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ssh frak@192.168.7.11
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo make master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;frak-the-nodes&quot;&gt;Frak the nodes&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo make slave
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><summary type="html">Clone project :</summary></entry><entry><title type="html">Internet of Things (Intro)</title><link href="/IoT/" rel="alternate" type="text/html" title="Internet of Things (Intro)" /><published>2016-09-26T00:00:00+07:00</published><updated>2016-09-26T00:00:00+07:00</updated><id>/IoT</id><content type="html" xml:base="/IoT/">&lt;script async=&quot;&quot; class=&quot;speakerdeck-embed&quot; data-id=&quot;4a4fa2ee235047c69562194d277ccd0c&quot; data-ratio=&quot;1.77777777777778&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;</content><summary type="html"></summary></entry><entry><title type="html">Build Large Scalability System With Django And Flask Integration</title><link href="/Build-large-scalability-with-flask-django/" rel="alternate" type="text/html" title="Build Large Scalability System With Django And Flask Integration" /><published>2016-09-26T00:00:00+07:00</published><updated>2016-09-26T00:00:00+07:00</updated><id>/Build-large-scalability-with-flask-django</id><content type="html" xml:base="/Build-large-scalability-with-flask-django/">&lt;script async=&quot;&quot; class=&quot;speakerdeck-embed&quot; data-id=&quot;49ff91641abe46e594d5fb4323cb85a0&quot; data-ratio=&quot;1.77777777777778&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;</content><summary type="html"></summary></entry></feed>
